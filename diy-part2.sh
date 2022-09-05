@@ -14,10 +14,9 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 添加额外软件包
-git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
+#git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
 
-# 修改连接数
-#sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=165535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
+
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
