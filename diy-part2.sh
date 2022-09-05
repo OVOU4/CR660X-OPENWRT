@@ -24,8 +24,9 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # sed -i 's/OpenWrt /编译时间 $(TZ=UTC-8 date "+%Y.%m.%d") @ 洋洋姐姐 /g' package/lean/default-settings/files/zzz-default-settings
 sed -i 's/OpenWrt /OpenWrt @ 洋洋姐姐 /g' package/lean/default-settings/files/zzz-default-settings
 
+#切换ramips内核到5.15
+sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.15' target/linux/ramips/Makefile
 
-#git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
 
 # themes添加（svn co 命令意思：指定版本如https://github）
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
