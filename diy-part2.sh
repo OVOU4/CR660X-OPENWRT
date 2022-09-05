@@ -20,3 +20,11 @@ git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-p
 #sed -i 's/net.netfilter.nf_conntrack_max=.*/net.netfilter.nf_conntrack_max=165535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
+
+#添加仓库
+git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
+
+
+
+./scripts/feeds update -a
+./scripts/feeds install -a
