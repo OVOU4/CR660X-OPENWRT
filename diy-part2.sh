@@ -20,6 +20,8 @@
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
+#添加名称
+sed -i 's/OpenWrt /OpenWrt @ 洋洋姐姐 /g' package/lean/default-settings/files/zzz-default-settings
 #git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
 
 # themes添加（svn co 命令意思：指定版本如https://github）
