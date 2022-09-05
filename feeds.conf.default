@@ -9,3 +9,5 @@ src-link custom /usr/src/openwrt/custom-feed
 src-git helloworld https://github.com/fw876/helloworld
 src-git passwall https://github.com/xiaorouji/openwrt-passwall
 src-git opentopd  https://github.com/sirpdboy/sirpdboy-package
+src-git poweroffdevice https://github.com/sirpdboy/luci-app-poweroffdevice
+
