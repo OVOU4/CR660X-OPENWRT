@@ -27,8 +27,6 @@ sed -i 's/OpenWrt /OpenWrt @ 洋洋姐姐 /g' package/lean/default-settings/file
 #切换ramips内核到5.15
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
 sed -i 's/5.10/5.15/g' target/linux/ramips/Makefile
-sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
-sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # themes添加（svn co 命令意思：指定版本如https://github）
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
