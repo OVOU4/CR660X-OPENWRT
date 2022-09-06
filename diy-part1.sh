@@ -21,6 +21,6 @@
 #git clone https://github.com/mchome/openwrt-vlmcsd.git package/vlmcsd
 
 
-sed -i 's/5.4/5.10/g' target/linux/ramips/Makefile
+#sed -i 's/5.4/5.10/g' target/linux/ramips/Makefile
 #sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
 #sed -i 's/disabled=1/disabled=0/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
