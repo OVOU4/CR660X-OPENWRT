@@ -18,7 +18,7 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 git clone https://github.com/Zxilly/UA2F.git package/UA2F
-git clone https://github.com/Wind4/vlmcsd.git package/UA2F
+git clone https://github.com/Wind4/vlmcsd.git package/vlmcsd
 
 
 sed -i 's/5.10/5.15/g' target/linux/ramips/Makefile
