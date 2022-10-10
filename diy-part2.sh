@@ -13,9 +13,9 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# 添加额外软件包
-#git clone https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
-
+#移除不需要的软件
+rm -rf feeds/luci/applications/luci-app-netdata
+rm -rf feeds/packages/net/smartdns
 
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
@@ -26,6 +26,14 @@ sed -i 's/OpenWrt /OpenWrt @ 洋洋姐姐 /g' package/lean/default-settings/file
 
 #切换ramips内核到5.15
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.10' target/linux/ramips/Makefile
+
+
+#安装额外软件
+git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns package/smartdns
+
 
 # themes添加（svn co 命令意思：指定版本如https://github）
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
@@ -41,11 +49,7 @@ sed -i 's/OpenWrt /OpenWrt @ 洋洋姐姐 /g' package/lean/default-settings/file
 #git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 #git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
 
-#添加smartdns
-#git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 
-#git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-#git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 #./scripts/feeds update -a
 #./scripts/feeds install -a
