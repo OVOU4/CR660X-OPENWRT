@@ -32,8 +32,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: CR660X-MT7621
-  PRODUCT_NAME: CR660X
+
+
 jobs:
   build:
     runs-on: ubuntu-22.04
